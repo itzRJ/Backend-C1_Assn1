@@ -14,7 +14,7 @@ public class FileHandler
     public static List<Integer> readFile(String aInFilePath) {
         try
         {
-            FileReader lFR = new FileReader("src/main/resources/inputFiles/inputF1");
+            FileReader lFR = new FileReader(aInFilePath);
             BufferedReader lBr = new BufferedReader(lFR);
             return lBr.lines().mapToInt(Integer::parseInt).boxed().collect(Collectors.toList());
         }
